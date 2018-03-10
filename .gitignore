@@ -1,3 +1,5 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -8,7 +10,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -20,9 +21,11 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -42,7 +45,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
 .hypothesis/
 
 # Translations
@@ -51,6 +54,8 @@ coverage.xml
 
 # Django stuff:
 *.log
+.static_storage/
+.media/
 local_settings.py
 
 # Flask stuff:
@@ -66,7 +71,7 @@ docs/_build/
 # PyBuilder
 target/
 
-# IPython Notebook
+# Jupyter Notebook
 .ipynb_checkpoints
 
 # pyenv
@@ -75,27 +80,110 @@ target/
 # celery beat schedule file
 celerybeat-schedule
 
-# dotenv
-.env
+# SageMath parsed files
+*.sage.py
 
-# virtualenv
+# Environments
+.env
+.venv
+env/
 venv/
 ENV/
+env.bak/
+venv.bak/
 
 # Spyder project settings
 .spyderproject
+.spyproject
 
 # Rope project settings
 .ropeproject
 
-# custom file
-*.json
-*.idea
-*.DS_Store
-*.pyc
-test*
-headers.py
+# mkdocs documentation
+/site
 
-# custom dir
+# mypy
+.mypy_cache/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen### Windows template
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+.gitignore
+.idea/
+config.pyc
+ipproxytool/__init__.pyc
+ipproxytool/__pycache__/
+ipproxytool/settings.pyc
+ipproxytool/spiders/__init__.pyc
+ipproxytool/spiders/__pycache__/
+ipproxytool/spiders/proxy/__init__.pyc
+ipproxytool/spiders/proxy/__pycache__/
+ipproxytool/spiders/proxy/basespider.pyc
+ipproxytool/spiders/proxy/data5u.pyc
+ipproxytool/spiders/proxy/freeproxylists.pyc
+ipproxytool/spiders/proxy/gatherproxy.pyc
+ipproxytool/spiders/proxy/hidemy.pyc
+ipproxytool/spiders/proxy/ip181.pyc
+ipproxytool/spiders/proxy/kuaidaili.pyc
+ipproxytool/spiders/proxy/proxydb.pyc
+ipproxytool/spiders/proxy/proxylistplus.pyc
+ipproxytool/spiders/proxy/sixsixip.pyc
+ipproxytool/spiders/proxy/usproxy.pyc
+ipproxytool/spiders/proxy/xicidaili.pyc
+ipproxytool/spiders/validator/__init__.pyc
+ipproxytool/spiders/validator/__pycache__/
+ipproxytool/spiders/validator/amazoncn.pyc
+ipproxytool/spiders/validator/anjuke.pyc
+ipproxytool/spiders/validator/assetstore.pyc
+ipproxytool/spiders/validator/baidu.pyc
+ipproxytool/spiders/validator/bbs.pyc
+ipproxytool/spiders/validator/boss.pyc
+ipproxytool/spiders/validator/douban.pyc
+ipproxytool/spiders/validator/gather.pyc
+ipproxytool/spiders/validator/httpbin.pyc
+ipproxytool/spiders/validator/jd.pyc
+ipproxytool/spiders/validator/lagou.pyc
+ipproxytool/spiders/validator/liepin.pyc
+ipproxytool/spiders/validator/steam.pyc
+ipproxytool/spiders/validator/validator.pyc
+ipproxytool/spiders/validator/zhilian.pyc
 log/
-
+proxy.pyc
+run_validator.pyc
+server/__init__.pyc
+server/__pycache__/
+server/dataserver.pyc
+sql/__init__.pyc
+sql/__pycache__/
+sql/mongodb.pyc
+sql/mysql.pyc
+sql/sql_base.pyc
+sql/sql_manager.pyc
+utils.pyc

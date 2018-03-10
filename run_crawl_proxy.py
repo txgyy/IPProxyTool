@@ -17,9 +17,10 @@ from ipproxytool.spiders.proxy.gatherproxy import GatherproxySpider
 from ipproxytool.spiders.proxy.hidemy import HidemySpider
 from ipproxytool.spiders.proxy.proxylistplus import ProxylistplusSpider
 from ipproxytool.spiders.proxy.freeproxylists import FreeProxyListsSpider
+# from ipproxytool.spiders.proxy.peuland import PeulandSpider
 from ipproxytool.spiders.proxy.usproxy import UsProxySpider
 from ipproxytool.spiders.proxy.proxydb import ProxyDBSpider
-
+# from ipproxytool.spiders.proxy.proxyrox import ProxyRoxSpider
 
 scrapydo.setup()
 
@@ -34,6 +35,7 @@ if __name__ == '__main__':
         format = '%(levelname)s %(asctime)s: %(message)s',
         level = logging.DEBUG
     )
+
     sql = SqlManager()
 
     spiders = [
@@ -42,21 +44,22 @@ if __name__ == '__main__':
         IpOneEightOneSpider,
         KuaiDaiLiSpider,  # 在访问前加了一个 js ，反爬
         GatherproxySpider,
-       # HidemySpider,  已失效
+        HidemySpider,
         ProxylistplusSpider,
         FreeProxyListsSpider,
         # PeulandSpider,  # 目标站点失效
         UsProxySpider,
         ProxyDBSpider,
+        # ProxyRoxSpider,
     ]
+
     while True:
         utils.log('*******************run spider start...*******************')
-        #sql.delete_old(config.free_ipproxy_table, 0.5)
-        try:
-            for spider in spiders:
-                scrapydo.run_spider(spider_cls = spider)
-        except Exception as e:
-            utils.log('[Error]# spider goes wroing.Return Message: {}'.format(str(e)))
-     
+
+        sql.delete_old(config.free_ipproxy_table, 0.5)
+
+        for spider in spiders:
+            scrapydo.run_spider(spider_cls = spider)
+
         utils.log('*******************run spider waiting...*******************')
         time.sleep(1200)

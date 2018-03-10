@@ -7,12 +7,6 @@
 ## 运行环境
 安装 python3  and mysql 数据库
 
-cryptography模块安装环境:
-```
-sudo yum install gcc libffi-devel python-devel openssl-devel
-```
-
-
 ```
 $ pip install -r requirements.txt
 ```
@@ -46,28 +40,13 @@ database_config = {
 }
 ```
 
-MYSQL: 导入数据表结构
-```
-$ mysql> create database ipproxy;
-Query OK, 1 row affected (0.00 sec)
-$ mysql> use ipproxy;
-Database changed
-$ mysql> source '/你的项目目录/db.sql'
-
-```
-
 
 运行启动脚本 ipproxytool.py 也可以分别运行抓取，验证，服务器接口脚本，运行方法参考项目说明
 
 ```
-$ python ipproxytool.py 
+$ python ipproxytool.py
 ```
 
-新增异步验证方式，运行方法如下
-
-```
-$ python ipproxytool.py async
-```
 <br>
 
 ## 项目说明

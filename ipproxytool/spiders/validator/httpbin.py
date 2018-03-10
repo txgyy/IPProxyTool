@@ -90,7 +90,7 @@ class HttpBinSpider(Validator):
             self.log('proxy_info:%s' % (str(proxy)))
 
             if proxy.https == 'no':
-                data = json.loads(response.body)
+                data = json.loads(response.body_as_unicode())
                 origin = data.get('origin')
                 headers = data.get('headers')
                 x_forwarded_for = headers.get('X-Forwarded-For', None)

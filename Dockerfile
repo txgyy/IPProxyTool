@@ -1,7 +1,9 @@
-FROM docker.io/mrjogo/scrapy 
+FROM docker.io/python:3.6
 ENV PATH /usr/local/bin:$PATH
 ENV PATH /home:$PATH
-ADD . /home
+COPY . /home
 WORKDIR /home
-RUN pip install -i https://mirrors.aliyun.com/pypi/simple -r requirements.txt
+RUN apt-get update && apt-get install -y lsof \
+    && pip install -i https://mirrors.aliyun.com/pypi/simple -r requirements.txt \
+    && apt-get autoclean
 CMD python ipproxytool.py
